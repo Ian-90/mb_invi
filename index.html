@@ -25,8 +25,6 @@
 
     <!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="assets/styles/style.css"/>
-
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d8af6748a88acf7d8d8aa054a61f42b5"></script>
 <style>
 @media (max-width: 992px) {
   #slide_1_margin{
@@ -412,7 +410,7 @@
     선릉 상록아트홀</p>
     <p class="description" style="color:white;margin-bottom:0.5rem">
     5층 아트홀</p> -->
-    <div id="map" style="width:100%;height:300px;"></div>
+    <div id="daumRoughmapContainer1667479848786" class="root_daum_roughmap root_daum_roughmap_landing"></div>
     <div style="display:flex; justify-items: center; margin-top:16px;">
       <div style="width:40px;height:40px;">
         <a href="https://m.map.kakao.com/actions/searchView?q=%EC%84%9C%EC%9A%B8%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%96%B8%EC%A3%BC%EB%A1%9C%20508%20%EC%83%81%EB%A1%9D%EC%95%84%ED%8A%B8%ED%99%80" target="_blank">
@@ -436,25 +434,14 @@
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/plugins.js"></script>
   <script src="assets/js/common.js"></script>
-  <script>
-    var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(37.50729698510597, 127.04625815565265),
-			level: 5
-		};
-
-		var map = new kakao.maps.Map(container, options);
-  
-    // 마커가 표시될 위치입니다 
-    var markerPosition  = new kakao.maps.LatLng(37.50729698510597, 127.04625815565265); 
-
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);
+  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script charset="UTF-8">
+    new daum.roughmap.Lander({
+      "timestamp" : "1667479848786",
+      "key" : "2cdwc",
+      "mapWidth" : "640",
+      "mapHeight" : "360"
+    }).render();
   </script>
 </body>
 </html>
